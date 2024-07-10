@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", Arial;
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(24, 119, 242);
+  justify-content: space-between;
+  height: 45px;
+  align-items: center;
+  padding: 0 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: large;
+}
+
+.search-container {
+  width: 50%;
+  display: flex;
+  justify-content: end;
+}
+nav input {
+  border-radius: 20px;
+  background-color: white;
+  border: none;
+  height: 30px;
+  padding: 8px;
+  outline: none;
+  max-width: 40vw;
+  width: 100%;
+}
+
+/* -----------------------nav end --------------------------- */
+
+main {
+  margin-top: 45px;
+}
+.reg-count {
+  color: gray;
+  margin: 1px 3px;
+  padding-top: 10px;
+}
+.reg-count span {
+  color: rgb(24, 119, 242);
+}
+#chart {
+  width: 90vw;
+}
+.graph-container {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-top: 20px;
+  width: 95vw;
+}
+.graph-container::-webkit-scrollbar {
+  display: none;
+}
+.tile {
+  width: 300px;
+  height: 150px;
+  background-color: red;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+/* -------------------------stat end--------------------------- */
+.heading {
+  text-align: center;
+  color: rgb(24, 119, 242);
+  margin: 10px 0;
+}
+.table-container {
+  max-height: 40vh;
+  display: flex;
+  justify-content: center;
+  overflow: scroll;
+  padding: 5px;
+  position: relative;
+  border-radius: 15px;
+}
+table {
+  width: 70vw;
+  min-width: 350px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.table-container table td,
+th {
+  width: 200px;
+  text-align: center;
+  height: 45px;
+  background-color: rgb(246, 240, 240);
+}
+.table-container table th {
+  background-color: rgba(24, 118, 242, 0.786);
+  color: white;
+}
+.table-container table tr:nth-child(odd) td {
+  background-color: rgba(24, 118, 242, 0.208);
+}
+.table-container table tr:hover td {
+  background-color: #009d835c;
+}
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #f5f5f5;
+}
+
+body::-webkit-scrollbar {
+  width: 6px;
+  background-color: #ffffff;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #0974de;
+}
+.style-3::-webkit-scrollbar {
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  #chart {
+    width: 60vw;
+  }
+  .graph-container {
+    overflow: hidden;
+    height: unset;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .email {
+    display: none;
+  }
+}
